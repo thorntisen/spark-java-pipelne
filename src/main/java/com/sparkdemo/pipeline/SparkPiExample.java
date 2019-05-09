@@ -7,12 +7,13 @@ import org.apache.spark.sql.SparkSession;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Example {
+public class SparkPiExample {
 
     public static void main(String[] args) {
         SparkSession spark = SparkSession
                 .builder()
                 .appName("JavaSparkPi")
+                .enableHiveSupport()
                 .getOrCreate();
 
 
